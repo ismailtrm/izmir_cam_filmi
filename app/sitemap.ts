@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.royalclassgarage.com';
+  const baseUrl = 'https://izmircamfilmkaplama.com';
   
   return [
     {
@@ -11,46 +11,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/hizmetlerimiz`,
+      url: `${baseUrl}/oto-cam-filmi`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/cam-filmi`,
+      url: `${baseUrl}/bina-cam-filmi`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/resimler`,
+      url: `${baseUrl}/guvenlik-filmi`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/videolar`,
+      url: `${baseUrl}/boya-koruma-filmi`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ozel-tasarimlar`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/hakkimizda`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/iletisim`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    }
   ];
 } 

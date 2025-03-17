@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaGlobe, FaPhone } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function Footer() {
@@ -12,39 +12,45 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <h3 className="text-xl font-bold mb-6">ROYAL CLASS GARAGE</h3>
+            <h3 className="text-xl font-bold mb-6">KAR PLUS</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-gray-300">Ana Sayfa</Link></li>
-              <li><Link href="/tekne-kaplama" className="hover:text-gray-300">Tekne Kaplama</Link></li>
-              <li><Link href="/oto-kuafor" className="hover:text-gray-300">Oto Kuaför</Link></li>
-              <li><Link href="/bodykit" className="hover:text-gray-300">Bodykit</Link></li>
-              <li><Link href="/resimler" className="hover:text-gray-300">Resimler</Link></li>
-              <li><Link href="/hakkimizda" className="hover:text-gray-300">Hakkımızda</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-6">HİZMETLERİMİZ</h3>
-            <ul className="space-y-2">
-              <li><Link href="/arac-kaplama" className="hover:text-gray-300">Araç Kaplama</Link></li>
-              <li><Link href="/cam-filmi" className="hover:text-gray-300">Cam Filmi</Link></li>
-              <li><Link href="/kisiye-ozel-tasarim" className="hover:text-gray-300">Kişiye Özel Tasarım</Link></li>
-              <li><Link href="/arac-yazilim" className="hover:text-gray-300">Araç Yazılım</Link></li>
-              <li><Link href="/videolar" className="hover:text-gray-300">Videolar</Link></li>
+              <li><Link href="/oto-cam-filmi" className="hover:text-gray-300">Oto Cam Filmi</Link></li>
+              <li><Link href="/bina-cam-filmi" className="hover:text-gray-300">Bina Cam Filmi</Link></li>
+              <li><Link href="/guvenlik-filmi" className="hover:text-gray-300">Güvenlik Filmi</Link></li>
+              <li><Link href="/boya-koruma-filmi" className="hover:text-gray-300">Boya Koruma Filmi</Link></li>
               <li><Link href="/iletisim" className="hover:text-gray-300">İletişim</Link></li>
             </ul>
           </div>
           
           <div>
+            <h3 className="text-xl font-bold mb-6">HİZMETLERİMİZ</h3>
+            <p className="text-gray-300 mb-4">Cam filmi tonları:</p>
+            <ul className="space-y-2">
+              <li><span className="text-gray-300">%70 Cam Filmi</span></li>
+              <li><span className="text-gray-300">%50 Cam Filmi</span></li>
+              <li><span className="text-gray-300">%35 Cam Filmi</span></li>
+              <li><span className="text-gray-300">%20 Cam Filmi</span></li>
+              <li><span className="text-gray-300">%5 Cam Filmi</span></li>
+            </ul>
+          </div>
+          
+          <div>
             <h3 className="text-xl font-bold mb-6">İletişim Bilgilerimiz</h3>
-            <p className="mb-4">TEL: (232) 435 01 58</p>
-            <p className="mb-4">Email: destek@royalclassgarage.com</p>
-            <p className="mb-8">
-              Royal Class Otomotiv San. Tic. ve Ltd. Şti.<br />
-              Kazımdirik Mahallesi Sanayi Caddesi No: 60 - 62 Bornova<br />
-              İZMİR
+            <p className="mb-4 flex items-center">
+              <FaPhone className="mr-2" /> 0545 820 70 84
             </p>
-            <Link href="/harita" className="text-gray-300 hover:text-white underline">Haritada göster</Link>
+            <p className="mb-4 flex items-center">
+              <FaInstagram className="mr-2" /> izmircamfilmi
+            </p>
+            <p className="mb-4 flex items-center">
+              <FaGlobe className="mr-2" /> izmircamfilmkaplama.com
+            </p>
+            <div className="mt-6">
+              <Link href="https://maps.app.goo.gl/jZoDdDEMZ5hFE31r7" target="_blank" className="text-gray-300 hover:text-white underline">
+                Haritada göster
+              </Link>
+            </div>
           </div>
         </div>
         
@@ -54,30 +60,27 @@ export default function Footer() {
               {!logoError ? (
                 <img 
                   src="/images/logo-white.png" 
-                  alt="Royal Class Garage" 
+                  alt="KAR PLUS" 
                   className="h-10 object-contain" 
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <span className="text-yellow-500 font-bold">ROYAL CLASS GARAGE</span>
+                <span className="text-white font-bold">KAR PLUS</span>
               )}
             </div>
           </div>
           
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
-            © 2016 Tüm Hakları Royal Class Otomotiv Tic. San. ve Ltd. Şti. aittir.
+            © {new Date().getFullYear()} Tüm Hakları Saklıdır.
           </p>
           
           <div className="flex space-x-4">
             <span className="text-gray-400 mr-2">SOSYAL MEDYA</span>
-            <Link href="https://facebook.com" className="hover:text-gray-300">
-              <FaFacebook />
-            </Link>
-            <Link href="https://instagram.com" className="hover:text-gray-300">
+            <Link href="https://www.instagram.com/izmircamfilmi/" target="_blank" className="hover:text-gray-300">
               <FaInstagram />
             </Link>
-            <Link href="https://youtube.com" className="hover:text-gray-300">
-              <FaYoutube />
+            <Link href="https://izmircamfilmkaplama.com" target="_blank" className="hover:text-gray-300">
+              <FaGlobe />
             </Link>
           </div>
         </div>

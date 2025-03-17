@@ -20,8 +20,9 @@ export default function HeroSection() {
         
         <div className="container mx-auto px-4 h-full flex items-center relative z-10">
           <div className="max-w-2xl text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Cam Filmi</h1>
-            <p className="text-xl md:text-2xl font-light mb-4">RoyalClassGarage</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">KAR PLUS</h1>
+            <p className="text-xl md:text-2xl font-light mb-4">Oto Cam Filmi - Bina Cam Filmi</p>
+            <p className="text-lg md:text-xl font-light">Güvenlik Filmi - Boya Koruma Filmi</p>
           </div>
         </div>
       </section>
@@ -44,8 +45,9 @@ export default function HeroSection() {
       
       <div className="container mx-auto px-4 h-full flex items-center relative z-10">
         <div className="max-w-2xl text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Cam Filmi</h1>
-          <p className="text-xl md:text-2xl font-light mb-4">RoyalClassGarage</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">KAR PLUS</h1>
+          <p className="text-xl md:text-2xl font-light mb-4">Oto Cam Filmi - Bina Cam Filmi</p>
+          <p className="text-lg md:text-xl font-light">Güvenlik Filmi - Boya Koruma Filmi</p>
         </div>
       </div>
     </section>

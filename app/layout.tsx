@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "İzmir Cam Filmi | Royal Class Garage",
-  description: "İzmir'de profesyonel cam filmi uygulamaları. ORACAL marka Almanya menşeili %100 garantili cam filmi hizmetleri.",
+  title: "KAR PLUS | İzmir Cam Filmi ve Kaplama",
+  description: "İzmir'de profesyonel oto cam filmi, bina cam filmi, güvenlik filmi ve boya koruma filmi uygulamaları. Kaliteli ve garantili hizmet.",
 };
 
 export default function RootLayout({

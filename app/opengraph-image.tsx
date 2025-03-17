@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-export const alt = 'İzmir Cam Filmi - Royal Class Garage';
+export const alt = 'KAR PLUS - İzmir Cam Filmi, Bina Cam Filmi ve Boya Koruma Filmi';
 export const size = {
   width: 1200,
   height: 630,
@@ -16,7 +16,7 @@ export default async function Image() {
       <div
         style={{
           fontSize: 128,
-          background: 'linear-gradient(to right, #0F172A, #000)',
+          background: 'linear-gradient(to right, #14182f, #000)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -28,13 +28,16 @@ export default async function Image() {
         }}
       >
         <div style={{ fontSize: '64px', fontWeight: 'bold', marginBottom: '16px' }}>
-          CAM FİLMİ
+          KAR PLUS
         </div>
         <div style={{ fontSize: '32px', color: '#f3f4f6' }}>
-          ROYAL CLASS GARAGE
+          OTO CAM FİLMİ - BİNA CAM FİLMİ
+        </div>
+        <div style={{ fontSize: '28px', color: '#e5e7eb', marginTop: '16px' }}>
+          GÜVENLİK FİLMİ - BOYA KORUMA FİLMİ
         </div>
         <div style={{ fontSize: '24px', color: '#e5e7eb', marginTop: '32px' }}>
-          İzmir'in en kaliteli cam filmi uygulaması
+          0545 820 70 84
         </div>
       </div>
     ),
