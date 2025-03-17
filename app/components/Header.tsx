@@ -30,7 +30,7 @@ export default function Header() {
       </div>
       
       {/* Main navigation */}
-      <div className="bg-white shadow-md relative">
+      <div className="bg-red-600 shadow-md relative">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold">
@@ -44,34 +44,65 @@ export default function Header() {
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <span className="text-gray-700 font-bold">KAR PLUS</span>
+                <span className="text-white font-bold">KAR PLUS</span>
               )}
             </Link>
           </div>
           
-          <nav className="hidden md:flex space-x-6">
-            <Link href="/" className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+          <nav className="hidden md:flex items-center">
+            <Link href="/" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
               ANA SAYFA
             </Link>
-            <Link href="/oto-cam-filmi" className="text-gray-700 hover:text-gray-900">
-              OTO CAM FİLMİ
+            <div className="group relative">
+              <button className="text-white px-4 py-2 font-semibold hover:bg-red-700 flex items-center">
+                HİZMETLERİMİZ
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-1 py-2 min-w-[200px] z-50">
+                <Link href="/arac-kaplama" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Araç Kaplama
+                </Link>
+                <Link href="/ppf-tpu-kaplama" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  PPF TPU Kaplama
+                </Link>
+                <Link href="/tekne-kaplama" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Tekne Kaplama
+                </Link>
+                <Link href="/oto-cam-filmi" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Oto Cam Filmi
+                </Link>
+                <Link href="/bina-cam-filmi" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Bina Cam Filmi
+                </Link>
+                <Link href="/guvenlik-filmi" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Güvenlik Filmi
+                </Link>
+                <Link href="/boya-koruma-filmi" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Boya Koruma Filmi
+                </Link>
+              </div>
+            </div>
+            <Link href="/resimler" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
+              RESİMLER
             </Link>
-            <Link href="/bina-cam-filmi" className="text-gray-700 hover:text-gray-900">
-              BİNA CAM FİLMİ
+            <Link href="/videolar" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
+              VİDEOLAR
             </Link>
-            <Link href="/guvenlik-filmi" className="text-gray-700 hover:text-gray-900">
-              GÜVENLİK FİLMİ
+            <Link href="/ozel-tasarimlar" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
+              ÖZEL TASARIMLAR
             </Link>
-            <Link href="/boya-koruma-filmi" className="text-gray-700 hover:text-gray-900">
-              BOYA KORUMA FİLMİ
+            <Link href="/hakkimizda" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
+              HAKKIMIZDA
             </Link>
-            <Link href="/iletisim" className="text-gray-700 hover:text-gray-900">
+            <Link href="/iletisim" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
               İLETİŞİM
             </Link>
           </nav>
           
           <button 
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -92,33 +123,89 @@ export default function Header() {
                 >
                   ANA SAYFA
                 </Link>
+                
+                <div className="border-b border-gray-100 pb-2">
+                  <p className="font-bold text-gray-800 mb-2">HİZMETLERİMİZ</p>
+                  <div className="pl-4 space-y-2">
+                    <Link 
+                      href="/arac-kaplama" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Araç Kaplama
+                    </Link>
+                    <Link 
+                      href="/ppf-tpu-kaplama" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      PPF TPU Kaplama
+                    </Link>
+                    <Link 
+                      href="/tekne-kaplama" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Tekne Kaplama
+                    </Link>
+                    <Link 
+                      href="/oto-cam-filmi" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Oto Cam Filmi
+                    </Link>
+                    <Link 
+                      href="/bina-cam-filmi" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Bina Cam Filmi
+                    </Link>
+                    <Link 
+                      href="/guvenlik-filmi" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Güvenlik Filmi
+                    </Link>
+                    <Link 
+                      href="/boya-koruma-filmi" 
+                      className="block text-gray-700 hover:text-gray-900"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Boya Koruma Filmi
+                    </Link>
+                  </div>
+                </div>
+                
                 <Link 
-                  href="/oto-cam-filmi" 
+                  href="/resimler" 
                   className="text-gray-700 hover:text-gray-900 border-b border-gray-100 pb-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  OTO CAM FİLMİ
+                  RESİMLER
                 </Link>
                 <Link 
-                  href="/bina-cam-filmi" 
+                  href="/videolar" 
                   className="text-gray-700 hover:text-gray-900 border-b border-gray-100 pb-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  BİNA CAM FİLMİ
+                  VİDEOLAR
                 </Link>
                 <Link 
-                  href="/guvenlik-filmi" 
+                  href="/ozel-tasarimlar" 
                   className="text-gray-700 hover:text-gray-900 border-b border-gray-100 pb-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  GÜVENLİK FİLMİ
+                  ÖZEL TASARIMLAR
                 </Link>
                 <Link 
-                  href="/boya-koruma-filmi" 
+                  href="/hakkimizda" 
                   className="text-gray-700 hover:text-gray-900 border-b border-gray-100 pb-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  BOYA KORUMA FİLMİ
+                  HAKKIMIZDA
                 </Link>
                 <Link 
                   href="/iletisim" 

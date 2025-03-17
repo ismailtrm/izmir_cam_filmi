@@ -9,6 +9,7 @@ const HeroSection = dynamic(() => import('./components/HeroSection'), { ssr: tru
 const Footer = dynamic(() => import('./components/Footer'), { ssr: true });
 // Import BackToTop component
 const BackToTop = dynamic(() => import('./components/BackToTop'));
+const WhatsAppButton = dynamic(() => import('./components/WhatsAppButton'));
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       
       <ClientOnly>
         <BackToTop />
+        <WhatsAppButton />
       </ClientOnly>
     </main>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function HeroSection() {
   const [imageError, setImageError] = useState(false);
@@ -22,7 +23,15 @@ export default function HeroSection() {
           <div className="max-w-2xl text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">KAR PLUS</h1>
             <p className="text-xl md:text-2xl font-light mb-4">Oto Cam Filmi - Bina Cam Filmi</p>
-            <p className="text-lg md:text-xl font-light">Güvenlik Filmi - Boya Koruma Filmi</p>
+            <p className="text-lg md:text-xl font-light mb-8">Güvenlik Filmi - Boya Koruma Filmi</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/iletisim" className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-center transition-all transform hover:scale-105">
+                ÜCRETSİZ FİYAT TEKLİFİ
+              </Link>
+              <Link href="tel:05458207084" className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-lg text-center transition-all">
+                BİZİ ARAYIN
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -47,7 +56,15 @@ export default function HeroSection() {
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">KAR PLUS</h1>
           <p className="text-xl md:text-2xl font-light mb-4">Oto Cam Filmi - Bina Cam Filmi</p>
-          <p className="text-lg md:text-xl font-light">Güvenlik Filmi - Boya Koruma Filmi</p>
+          <p className="text-lg md:text-xl font-light mb-8">Güvenlik Filmi - Boya Koruma Filmi</p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/iletisim" className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-center transition-all transform hover:scale-105">
+              ÜCRETSİZ FİYAT TEKLİFİ
+            </Link>
+            <Link href="tel:05458207084" className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-lg text-center transition-all">
+              BİZİ ARAYIN
+            </Link>
+          </div>
         </div>
       </div>
     </section>

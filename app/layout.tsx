@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning={true} data-lt-installed="true">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>
