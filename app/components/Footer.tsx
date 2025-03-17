@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Footer() {
+  const [logoError, setLogoError] = useState(false);
+  
   return (
     <footer className="bg-[#14182f] text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -46,19 +51,16 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="h-10">
-              <img 
-                src="/images/logo-white.png" 
-                alt="Royal Class Garage" 
-                className="h-10 object-contain" 
-                onError={(e) => {
-                  const target = e.target as HTMLElement;
-                  target.style.display = 'none';
-                  // Show text instead
-                  if (target.parentElement) {
-                    target.parentElement.innerHTML = '<span class="text-yellow-500 font-bold">ROYAL CLASS GARAGE</span>';
-                  }
-                }}
-              />
+              {!logoError ? (
+                <img 
+                  src="/images/logo-white.png" 
+                  alt="Royal Class Garage" 
+                  className="h-10 object-contain" 
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <span className="text-yellow-500 font-bold">ROYAL CLASS GARAGE</span>
+              )}
             </div>
           </div>
           

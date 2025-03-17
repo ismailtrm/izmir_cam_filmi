@@ -7,28 +7,39 @@ export default function BackToTop() {
   
   // Show button when page is scrolled down
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
+    if (typeof window !== 'undefined') {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     }
   };
   
   // Set the top coordinate to 0
   // Scroll smoothly to the top
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
   };
   
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    // Initial check
+    toggleVisibility();
     
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
+    // Add scroll listener
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', toggleVisibility);
+      
+      return () => {
+        window.removeEventListener('scroll', toggleVisibility);
+      };
+    }
+    return undefined;
   }, []);
   
   return (
