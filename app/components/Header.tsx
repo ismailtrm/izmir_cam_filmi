@@ -14,8 +14,8 @@ export default function Header() {
       <div className="bg-[#14182f] text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <Link href="https://www.instagram.com/izmircamfilmi/" target="_blank" className="hover:text-gray-300 flex items-center">
-              <FaInstagram className="mr-1" /> <span className="hidden sm:inline">izmircamfilmi</span>
+            <Link href="https://www.instagram.com/izmircamfilm/" target="_blank" className="hover:text-gray-300 flex items-center">
+              <FaInstagram className="mr-1" /> <span className="hidden sm:inline">izmircamfilm</span>
             </Link>
             <Link href="https://izmircamfilmkaplama.com" target="_blank" className="hover:text-gray-300 flex items-center">
               <FaGlobe className="mr-1" /> <span className="hidden sm:inline">izmircamfilmkaplama.com</span>
@@ -38,9 +38,8 @@ export default function Header() {
                 <img 
                   src="/images/logo.png" 
                   alt="KAR PLUS" 
-                  width={120} 
-                  height={40} 
-                  className="object-contain" 
+                  width={140} 
+                  className="object-contain mt-2" 
                   onError={() => setLogoError(true)}
                 />
               ) : (

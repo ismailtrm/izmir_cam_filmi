@@ -37,13 +37,16 @@ export default function Footer() {
               <FaPhone className="mr-2" /> 0545 820 70 84
             </p>
             <p className="mb-4 flex items-center">
-              <FaInstagram className="mr-2" /> izmircamfilmi
+              <FaInstagram className="mr-2" /> izmircamfilm
             </p>
             <p className="mb-4 flex items-center">
               <FaGlobe className="mr-2" /> izmircamfilmkaplama.com
             </p>
+            <p className="mb-4">
+              Ali Fuat Cebesoy Mah. 9125/6. Sk. 184 A, 35160 Karabağlar/İzmir
+            </p>
             <div className="mt-6">
-              <Link href="https://maps.app.goo.gl/jZoDdDEMZ5hFE31r7" target="_blank" className="text-gray-300 hover:text-white underline">
+              <Link href="https://maps.app.goo.gl/DzoiYEBSy9wA44zm9" target="_blank" className="text-gray-300 hover:text-white underline">
                 Haritada göster
               </Link>
             </div>
@@ -55,9 +58,10 @@ export default function Footer() {
             <div className="h-10">
               {!logoError ? (
                 <img 
-                  src="/images/logo-white.png" 
+                  src="/images/logo.png" 
                   alt="KAR PLUS" 
-                  className="h-10 object-contain" 
+                  width={130}
+                  className="h-8 object-contain mt-3" 
                   onError={() => setLogoError(true)}
                 />
               ) : (
@@ -72,7 +76,7 @@ export default function Footer() {
           
           <div className="flex space-x-4">
             <span className="text-gray-400 mr-2">SOSYAL MEDYA</span>
-            <Link href="https://www.instagram.com/izmircamfilmi/" target="_blank" className="hover:text-gray-300">
+            <Link href="https://www.instagram.com/izmircamfilm/" target="_blank" className="hover:text-gray-300">
               <FaInstagram />
             </Link>
             <Link href="https://izmircamfilmkaplama.com" target="_blank" className="hover:text-gray-300">
