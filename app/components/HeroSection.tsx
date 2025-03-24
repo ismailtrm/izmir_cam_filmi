@@ -16,7 +16,7 @@ export default function HeroSection() {
     return (
       <section className="relative h-[500px] md:h-[600px] overflow-hidden bg-gradient-to-r from-blue-900 to-black">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         <div className="container mx-auto px-4 h-full flex items-center relative z-10">
@@ -43,13 +43,13 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         {!imageError && (
           <img 
-            src="/images/hero-car.jpg" 
+            src="\images\hero-car.jpg" 
             alt="Luxury car with window tinting" 
             className="w-full h-full object-cover"
             onError={() => setImageError(true)}
           />
         )}
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       <div className="container mx-auto px-4 h-full flex items-center relative z-10">

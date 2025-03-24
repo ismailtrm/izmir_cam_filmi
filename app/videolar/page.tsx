@@ -14,34 +14,30 @@ export const metadata: Metadata = {
   description: 'İzmir\'de KAR PLUS tarafından yapılan cam filmi ve araç kaplama çalışmalarının video galerisi.',
 };
 
-// Mock video data - replace with your real video data
+// Video data
 const videoContent = [
   {
     id: 1,
-    title: 'Araç Kaplama Uygulaması',
-    description: 'BMW M3 araç kaplama sürecinden görüntüler.',
-    videoId: 'your-youtube-id-1', // Replace with actual YouTube video ID
-    category: 'Araç Kaplama'
+    title: 'PPF Koruma Filmi Uygulaması - Ön Tampon',
+    description: 'Lüks araç ön tampon PPF (Paint Protection Film) uygulaması.',
+    videoSrc: '/videos/ppf-kaplama1.mp4',
+    posterSrc: '/images/video-thumbnails/ppf-kaplama1.png',
+    category: 'PPF TPU Kaplama'
   },
   {
     id: 2,
-    title: 'Oto Cam Filmi Uygulaması',
-    description: 'Mercedes S Serisi oto cam filmi uygulaması.',
-    videoId: 'your-youtube-id-2', // Replace with actual YouTube video ID
-    category: 'Oto Cam Filmi'
+    title: 'PPF Koruma Filmi Uygulaması - Kaput',
+    description: 'Spor araç kaput koruma filmi uygulaması detayları.',
+    videoSrc: '/videos/ppf-kaplama2.mp4',
+    posterSrc: '/images/video-thumbnails/ppf-kaplama2.png',
+    category: 'PPF TPU Kaplama'
   },
   {
     id: 3,
-    title: 'Bina Cam Filmi Uygulaması',
-    description: 'Ofis binası için güneş kontrol filmi uygulaması.',
-    videoId: 'your-youtube-id-3', // Replace with actual YouTube video ID
-    category: 'Bina Cam Filmi'
-  },
-  {
-    id: 4,
-    title: 'PPF Koruma Filmi Uygulaması',
-    description: 'Porsche 911 ön tampon Paint Protection Film (PPF) uygulaması.',
-    videoId: 'your-youtube-id-4', // Replace with actual YouTube video ID
+    title: 'PPF Koruma Filmi Uygulaması - Tam Araç',
+    description: 'Lüks araç için tam gövde PPF koruma uygulaması.',
+    videoSrc: '/videos/ppf-kaplama3.mp4',
+    posterSrc: '/images/video-thumbnails/ppf-kaplama3.png',
     category: 'PPF TPU Kaplama'
   }
 ];
@@ -66,13 +62,15 @@ export default function VideolarPage() {
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl"
               >
                 <div className="relative pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  <video
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    controls
+                    preload="metadata"
+                    poster={video.posterSrc} 
+                  >
+                    <source src={video.videoSrc} type="video/mp4" />
+                    Tarayıcınız video etiketini desteklemiyor.
+                  </video>
                 </div>
                 <div className="p-4">
                   <span className="inline-block px-3 py-1 text-sm font-semibold text-red-600 bg-red-100 rounded-full mb-2">

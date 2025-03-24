@@ -15,23 +15,19 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-6">KAR PLUS</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-gray-300">Ana Sayfa</Link></li>
-              <li><Link href="/oto-cam-filmi" className="hover:text-gray-300">Oto Cam Filmi</Link></li>
-              <li><Link href="/bina-cam-filmi" className="hover:text-gray-300">Bina Cam Filmi</Link></li>
-              <li><Link href="/guvenlik-filmi" className="hover:text-gray-300">Güvenlik Filmi</Link></li>
-              <li><Link href="/boya-koruma-filmi" className="hover:text-gray-300">Boya Koruma Filmi</Link></li>
-              <li><Link href="/iletisim" className="hover:text-gray-300">İletişim</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-xl font-bold mb-6">HİZMETLERİMİZ</h3>
-            <p className="text-gray-300 mb-4">Cam filmi tonları:</p>
             <ul className="space-y-2">
-              <li><span className="text-gray-300">%70 Cam Filmi</span></li>
-              <li><span className="text-gray-300">%50 Cam Filmi</span></li>
-              <li><span className="text-gray-300">%35 Cam Filmi</span></li>
-              <li><span className="text-gray-300">%20 Cam Filmi</span></li>
-              <li><span className="text-gray-300">%5 Cam Filmi</span></li>
+              <li><Link href="/oto-cam-filmi" className="hover:text-gray-300">Oto Cam Filmi</Link></li>
+              <li><Link href="/bina-cam-filmi" className="hover:text-gray-300">Bina Cam Filmi</Link></li>
+              <li><Link href="/guvenlik-filmi" className="hover:text-gray-300">Güvenlik Filmi</Link></li>
+              <li><Link href="/boya-koruma-filmi" className="hover:text-gray-300">Boya Koruma Filmi</Link></li>
+              <li><Link href="/arac-kaplama" className="hover:text-gray-300">Araç Kaplama</Link></li>
+              <li><Link href="/ppf-tpu-kaplama" className="hover:text-gray-300">PPF TPU Kaplama</Link></li>
+              <li><Link href="/iletisim" className="hover:text-gray-300">İletişim</Link></li>
             </ul>
           </div>
           

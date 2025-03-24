@@ -90,9 +90,6 @@ export default function Header() {
             <Link href="/videolar" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
               VİDEOLAR
             </Link>
-            <Link href="/ozel-tasarimlar" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
-              ÖZEL TASARIMLAR
-            </Link>
             <Link href="/hakkimizda" className="text-white px-4 py-2 font-semibold hover:bg-red-700">
               HAKKIMIZDA
             </Link>
@@ -192,13 +189,6 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   VİDEOLAR
-                </Link>
-                <Link 
-                  href="/ozel-tasarimlar" 
-                  className="text-gray-700 hover:text-gray-900 border-b border-gray-100 pb-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  ÖZEL TASARIMLAR
                 </Link>
                 <Link 
                   href="/hakkimizda" 
